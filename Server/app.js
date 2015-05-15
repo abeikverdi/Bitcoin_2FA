@@ -38,10 +38,11 @@ var y = curvePt.affineY.toBuffer(32);
 var publicKey = Buffer.concat([new Buffer([0x04]), x, y]);
 
 //User public key
-var mPrivateKey = new Buffer("1df56359e825cabaca7aad5f95913f3d511385a865f520716c3dfd2028355abf", 'hex'); //Counterparty private key
-var uCurvePt = ecparams.G.multiply(BigInteger.fromBuffer(mPrivateKey));
+var uPublickKey = new Buffer('0421b5493cc52afe69ac36ba0fa8365457eeae86b44a8862deb7c38313e8cab44494f77d402905e826bf5f7fdb33ce71600e4d6440e45732ef041c0c579d6daa4c', 'hex')
+//var mPrivateKey = new Buffer("1df56359e825cabaca7aad5f95913f3d511385a865f520716c3dfd2028355abf", 'hex'); //Counterparty private key
+var uCurvePt = ecurve.Point.decodeFrom(ecparams, uPublickKey);
 
-var uPublickKey = "0421b5493cc52afe69ac36ba0fa8365457eeae86b44a8862deb7c38313e8cab44494f77d402905e826bf5f7fdb33ce71600e4d6440e45732ef041c0c579d6daa4c";
+//var uPublickKey = "0421b5493cc52afe69ac36ba0fa8365457eeae86b44a8862deb7c38313e8cab44494f77d402905e826bf5f7fdb33ce71600e4d6440e45732ef041c0c579d6daa4c";
 
 
 publicKey = curvePt.getEncoded(false); //false forces uncompressed public key
