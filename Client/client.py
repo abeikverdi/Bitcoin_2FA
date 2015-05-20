@@ -19,11 +19,11 @@ secret = raw_input('Enter the secret you receive from server: ')
 #secret = '6e89f4170619c4fe3e79c9e7d51758e516ac58c73fbca2ee39cdd586c89c22ff'
 
 newprivkey = add_privkeys(mprivkey,secret)
-#print newprivkey
+print newprivkey
 
 newpubkey = '04' + electrum_mpk(newprivkey)
-print newpubkey
+#print newpubkey
 
 newaddr = pubkey_to_address(newpubkey)
 
-print newaddr
+#print newaddr

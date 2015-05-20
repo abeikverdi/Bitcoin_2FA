@@ -16,6 +16,12 @@
     "stylus": "0.42.3",
     "ecurve": "^1.0.1",
     "bigi": "^1.4.0",
-    "coinstring": "^2.2.0"
+    "coinstring": "^2.2.0",
+    "qrcode-npm": "0.0.3",
+    "qr-image": "^3.1.0",
+    "fs": "0.0.2",
+    "express-session": "^1.11.2",
+    "store": "^1.3.17",
+    "localStorage": "^1.0.3"
   }
 }

@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to #{title}
+		#container
+			<div id="left" style="float:left; color:green">
+			h2= address
+			</div>
+			<div id="right" style="float:right; color:red">
+			h2= secret
+			</div>
+
+	#qrcode
+	img(src= code)
