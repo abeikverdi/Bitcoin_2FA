@@ -8,9 +8,6 @@ var store = require('store')
 /*********************
 BITCOIN QRCODE
 **********************/
-
-
-
 /* GET home page. */
 router.get('/:id', function(req, res, next) {
 	var i = req.params.id
@@ -71,9 +68,6 @@ var nxPublicKey = Buffer.concat([new Buffer([0x04]), x1, y1]);
 var sha3 = crypto.createHash('sha256').update(nxPublicKey).digest();
 var nextpublicKeyHash = crypto.createHash('rmd160').update(sha3).digest();
 console.log(cs.encode(nextpublicKeyHash, 0x0))
-
-
-
 
   res.render('index', { 
   	title: 'Two-Factor Authentication',
