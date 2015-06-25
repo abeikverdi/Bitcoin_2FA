@@ -1,0 +1,35 @@
+
+<html>
+	<head>
+    	<title>2Factor Authentication</title>
+    	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+   	</head>
+
+  	<body>
+    	<div id="content">
+    		<div id="content">
+				<h1> <%=title%> </h1>
+			<div id="container">
+				<div id="left" style="float:left; color:green">
+					<p>Next address</p>
+					<h2><%=address%></h2>
+				</div>
+				<div id="right" style="float:right; color:red">
+					<p>2nd factor Secret</p>
+					<h2><%=secret%></h2>
+				</div>
+			</div>
+
+			<button id="next">Next address</a></button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$("#next").click(function(){
+				var i = parseInt(<%=index%>) + 1;
+				window.location.replace("/"+i);
+
+			});
+		</script>
+	</body>
+</html>

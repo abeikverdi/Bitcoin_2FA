@@ -9,6 +9,10 @@ var store = require('store')
 BITCOIN QRCODE
 **********************/
 /* GET home page. */
+router.get('/', function(req, res, next) {
+  res.redirect('/1');
+});
+
 router.get('/:id', function(req, res, next) {
 	var i = req.params.id
 
@@ -73,6 +77,7 @@ console.log(cs.encode(nextpublicKeyHash, 0x0))
   	title: 'Two-Factor Authentication',
   	secret: s.toString('hex'),
   	address: cs.encode(nextpublicKeyHash, 0x0),
+  	index: req.params.id
    });
 });
 
